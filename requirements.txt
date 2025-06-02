@@ -3,5 +3,6 @@ matplotlib==3.9.4
 numpy==2.0.2
 scikit-learn==1.6.1
 tensorflow==2.19.0
+torch
 ipykernel
 tqdm
