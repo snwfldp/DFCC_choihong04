@@ -21,25 +21,36 @@ INU 25-1 Machine Learning DFCC Challenge Team choihong04
 ├── model.py                # 전처리 함수, 모델 설계
 ├── requirements.txt        # 필요 라이브러리 목록
 ├── test.ipynb              # test 코드
-└── train.ipynb             # train 코드드
+└── train.ipynb             # train 코드
 ```
 
 ## How to run
 
-1. **필수 라이브러리 설치**
+1. **Required libraries installing**
     ```sh
     pip install -r requirements.txt
     ```
 
-2. **모델 학습**
-    - `./train.ipynb` 파일을 실행하세요.
+2. **Train model**
+    - Run `./train.ipynb`.
 
-3. **예측 결과 평가**
-    - 생성된 `team_test_result.txt` 파일을 `eval.pl`로 평가할 수 있습니다.
+3. **Test model & Evaluate**
+    - Run `./test.ipynb`.
+    - Evaluate generated `choihong04_test_result.txt` file using `eval.pl`.
+
     ```sh
-    perl eval.pl team_test_result.txt test_label.txt
+    perl eval.pl choihong04_test_result.txt test_label.txt
     ```
 
-## Reference
+## Code files
 
-- 데이터 및 라벨 파일 구조는 `2501ml_data/label/` 폴더 참고
+1. **train.ipynb**
+    ```sh
+    Running `train.ipynb` trains the model using `model.py` and the training data, producing a `model.pkl` file.
+    ```
+
+2. **test.ipynb**
+    ```sh
+    Running `test.ipynb` applies preprocessing to the test data via model.py, then uses `model.pkl` to make classification predictions on the test set. The results are evaluated using two metrics—accuracy and F1-score—and the predicted labels are saved to `choihong_test_result.txt`. You can then run the `eval.pl` script to compute the evaluation metrics for those predictions.
+    ```
+
