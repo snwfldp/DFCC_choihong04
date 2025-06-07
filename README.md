@@ -45,12 +45,8 @@ INU 25-1 Machine Learning DFCC Challenge Team choihong04
 ## Code files
 
 1. **train.ipynb**
-    ```sh
-    Running `train.ipynb` trains the model using `model.py` and the training data, producing a `model.pkl` file.
-    ```
+    - Running `train.ipynb` trains the model using `model.py` and the training data, producing a `model.pkl` file.
 
 2. **test.ipynb**
-    ```sh
-    Running `test.ipynb` applies preprocessing to the test data via model.py, then uses `model.pkl` to make classification predictions on the test set. The results are evaluated using two metrics—accuracy and F1-score—and the predicted labels are saved to `choihong_test_result.txt`. You can then run the `eval.pl` script to compute the evaluation metrics for those predictions.
-    ```
+    - Running `test.ipynb` applies preprocessing to the test data via model.py, then uses `model.pkl` to make classification predictions on the test set. The results are evaluated using two metrics—accuracy and F1-score—and the predicted labels are saved to `choihong_test_result.txt`. You can then run the `eval.pl` script to compute the evaluation metrics for those predictions.
 
